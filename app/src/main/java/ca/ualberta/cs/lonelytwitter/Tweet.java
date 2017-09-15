@@ -10,7 +10,7 @@ import java.util.Date;
 public abstract class Tweet implements Tweetable {
     private String message;
     private Date date;
-                     private ArrayList<Mood> moodList = new ArrayList<Mood>(); // List of moods to add to
+    private ArrayList<Mood> moodList = new ArrayList<Mood>(); // List of moods to add to
 
     public Tweet(String message){
         date = new Date();
