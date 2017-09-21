@@ -7,8 +7,10 @@ import java.util.Date;
  */
 
 public abstract class Mood {
+  // initialize the date
     private Date date;
 
+  // if date not entered, create date, else, use date given
     public Mood(){
         date = new Date();
     }
@@ -17,11 +19,13 @@ public abstract class Mood {
         this.date = date;
     }
 
+  // get and set the date
     public Date getDate(){ return date; }
 
     public void setDate(Date date) {
         this.date = date;
     }
 
+  // string for subclasses to represent mood
     public abstract String moodType();
 }
