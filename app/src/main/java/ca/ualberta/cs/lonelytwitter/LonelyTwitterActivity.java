@@ -24,6 +24,16 @@ import android.widget.ListView;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+/**
+ * The main class in the LonelyTwitter app.
+ * This app allows people to make Tweets,
+ * displays the Tweets, and allows for the tweets to be cleared.
+ *
+ * @author Team X
+ * @version 1.5
+ * @see Tweet
+ * @since 1.0
+ */
 public class LonelyTwitterActivity extends Activity {
 
 	private static final String FILENAME = "file.sav";
@@ -33,7 +43,15 @@ public class LonelyTwitterActivity extends Activity {
 	private ArrayList<Tweet> tweets = new ArrayList<Tweet>();
 	private ArrayAdapter<Tweet> adapter;
 	
-	/** Called when the activity is first created. */
+	/**
+	 * Called when the activity is first created.
+	 * It loads in the Tweets, shows the Tweets,
+	 * and gives us the text box and buttons to
+	 * create and clear Tweets.
+	 *
+	 * @param savedInstanceState Bundle savedInstanceState
+	 * @since 1.0
+	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -82,6 +100,11 @@ public class LonelyTwitterActivity extends Activity {
 		});
 	}
 
+	/**
+	 * Start the app.
+	 *
+	 * @since 1.0
+	 */
 	@Override
 	protected void onStart() {
 		// TODO Auto-generated method stub
@@ -92,6 +115,12 @@ public class LonelyTwitterActivity extends Activity {
 		oldTweetsList.setAdapter(adapter);
 	}
 
+	/**
+	 * Load the list of Tweets in the file
+	 *
+	 * @throws RuntimeException
+	 * @since 1.4
+	 */
 	private void loadFromFile() {
 		try {
 			FileInputStream fis = openFileInput(FILENAME);
@@ -110,7 +139,13 @@ public class LonelyTwitterActivity extends Activity {
 		}
 
 	}
-	
+
+	/**
+	 * Save the Tweets into a file
+	 *
+	 * @throws RuntimeException
+	 * @since 1.4
+	 */
 	private void saveInFile() {
 		try {
 			FileOutputStream fos = openFileOutput(FILENAME,
