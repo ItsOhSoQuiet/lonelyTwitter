@@ -14,11 +14,6 @@ import java.util.Date;
  * @since 1.2
  */
 public class Happy extends Mood {
-<<<<<<< HEAD
-  // Happy subclass
-    public Happy() { super(); }
-=======
->>>>>>> f17Wednesday
 
     /**
      * Construct a Happy object

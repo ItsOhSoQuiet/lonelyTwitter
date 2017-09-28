@@ -14,12 +14,6 @@ import java.util.Date;
  * @since 1.2
  */
 public abstract class Mood {
-<<<<<<< HEAD
-  // initialize the date
-    private Date date;
-
-  // if date not entered, create date, else, use date given
-=======
 
     private Date date;
 
@@ -28,7 +22,6 @@ public abstract class Mood {
      *
      * @since 1.2
      */
->>>>>>> f17Wednesday
     public Mood(){
         date = new Date();
     }
@@ -43,10 +36,6 @@ public abstract class Mood {
         this.date = date;
     }
 
-<<<<<<< HEAD
-  // get and set the date
-    public Date getDate(){ return date; }
-=======
     /**
      * Get the date from the Mood object
      *
@@ -56,7 +45,6 @@ public abstract class Mood {
     public Date getDate(){
         return date;
     }
->>>>>>> f17Wednesday
 
     /**
      * Set a new date for the Mood object
@@ -68,9 +56,7 @@ public abstract class Mood {
         this.date = date;
     }
 
-<<<<<<< HEAD
-  // string for subclasses to represent mood
-=======
+
     /**
      * Abstract method that returns the string
      * for the moodType for each class that
@@ -79,6 +65,5 @@ public abstract class Mood {
      * @return String moodType
      * @since 1.2
      */
->>>>>>> f17Wednesday
     public abstract String moodType();
 }

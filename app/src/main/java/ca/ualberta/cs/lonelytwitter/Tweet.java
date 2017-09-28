@@ -62,11 +62,7 @@ public abstract class Tweet implements Tweetable {
         return message;
     }
 
-<<<<<<< HEAD
-    // getter for the mood list
-    public ArrayList<Mood> getMoodList() {
-        return moodList;
-=======
+
     /**
      * Get the date from the Tweet object
      *
@@ -75,7 +71,6 @@ public abstract class Tweet implements Tweetable {
      */
     public Date getDate() {
         return date;
->>>>>>> f17Wednesday
     }
 
     /**
@@ -104,9 +99,7 @@ public abstract class Tweet implements Tweetable {
         }
     }
 
-<<<<<<< HEAD
-    // add to the mood list
-=======
+
     /**
      * Returns the Tweet object as a string
      *
@@ -125,7 +118,6 @@ public abstract class Tweet implements Tweetable {
      * @see Mood
      * @since 1.2
      */
->>>>>>> f17Wednesday
     public void addMood(Mood mood) {
         moodList.add(mood);
     }
