@@ -67,15 +67,15 @@ public class LonelyTwitterActivity extends Activity {
 				setResult(RESULT_OK);
 				String search = bodyText.getText().toString();
 
-				String query = "{\n" +
-						"";
+				String query = "{\n" + " \"query\": { \"term\": {\"message\":\""
+						+ search + "\"} }\n" + "}";
+
 				//tweetList.clear();
 				//deleteFile(FILENAME);  // TODO deprecate this button
 
 
 				ElasticsearchTweetController.GetTweetsTask getTweetsTask =
 						new ElasticsearchTweetController.GetTweetsTask();
-				ArrayList<NormalTweet> tweets = new ArrayList<NormalTweet>();
 				getTweetsTask.execute(query);
 				adapter.notifyDataSetChanged();
 			}
