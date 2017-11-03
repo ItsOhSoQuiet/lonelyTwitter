@@ -6,7 +6,7 @@ import android.widget.EditText;
 
 import com.robotium.solo.Solo;
 
-import junit.framework.TestCase;
+// import junit.framework.TestCase; import unused
 
 public class LonelyTwitterActivityTest extends ActivityInstrumentationTestCase2<LonelyTwitterActivity> {
 
@@ -16,16 +16,18 @@ public class LonelyTwitterActivityTest extends ActivityInstrumentationTestCase2<
         super(ca.ualberta.cs.lonelytwitter.LonelyTwitterActivity.class);
     }
 
+    // Removed @throws tag, because of Analyze -> Inspect code
     /**
      * Runs at the beginning of the test
-     * @throws Exception
      */
     public void setUp() throws Exception {
         solo = new Solo(getInstrumentation(), getActivity());
     }
 
     public void testStart() throws Exception {
-        Activity activity = getActivity();
+
+        // Unused assignment, taken out due to Analyze -> Inspect code
+        // Activity activity = getActivity();
 
     }
 
@@ -70,9 +72,9 @@ public class LonelyTwitterActivityTest extends ActivityInstrumentationTestCase2<
         assertTrue(solo.waitForText("Test Tweet!"));
     }
 
+    // Remove the @throws tag, due to Analyze -> Inspect code
     /**
      * Runs at the end of the tests
-     * @throws Exception
      */
     @Override
     public void tearDown() throws Exception {
